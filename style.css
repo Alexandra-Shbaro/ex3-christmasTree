@@ -1,0 +1,51 @@
+.row-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
+.symbol {
+    color: green;
+}
+
+/* Keyframe for shining effect */
+@keyframes shine-red {
+    0%, 100% {
+        color: red;
+        text-shadow: 0 0 5px rgba(255, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.3);
+    }
+    50% {
+        color: darkred;
+        text-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.5);
+    }
+}
+
+@keyframes shine-green {
+    0%, 100% {
+        color: green;
+        text-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.8);
+    }
+    50% {
+        color: darkgreen;
+        text-shadow: 0 0 15px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.8);
+    }
+}
+
+/* Apply the animation */
+.red {
+    color: red !important;
+    animation: shine-red 1.5s infinite alternate;
+}
+
+.green {
+    color: green;
+    animation: shine-green 1.5s infinite alternate;
+}
